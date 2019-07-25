@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuedu.model.mapper.CandidateMapper">
+	
+	<select id="selectCandidate"  parameterType="map" resultType="Candidate"  >
+		select *
+		from candidate
+		where aid=#{k_aid}
+		limit #{k_beginIndex},#{k_pagesize}
+	</select>
+	
+	<select id="selectCandidateByName"  parameterType="string" resultType="Candidate"   >
+		select *  from candidate
+		where name like #{name}
+	</select>
+	
+	<insert id="saveCandidate"  parameterType="Candidate">
+		<selectKey keyProperty="cid" order="BEFORE" resultType="int"  >
+			select max(cid)+1 from candidate
+		</selectKey>
+		insert into candidate 
+		values(#{cid},#{aid},#{name},#{declaration},#{mobile},#{sex},#{address},#{imgurl},#{tickets},#{hots},#{gifts},#{status},#{operator},#{operatorDate})
+	</insert>
+	
+	<update id="updateCandidateHot"  parameterType="int">
+		update candidate
+		set hots=hots+1
+		where cid=#{cid}
+	</update>
+	
+	<select id="selectCandidateById"  parameterType="int"  resultMap="cresult"   >
+		select c.*,i.id id,i.cid ccid,i.imgurl cimgurl
+		from candidate c  left join  images i
+		on  c.cid=i.cid
+		where  c.cid=#{cid}
+	</select>
+	
+	<resultMap type="Candidate" id="cresult">
+		<result  property="cid"   column="cid"  />
+		<result  property="aid"   column="aid"  />
+		<result  property="name"   column="name"  />
+		<result  property="declaration"   column="declaration"  />
+		<result  property="mobile"   column="mobile"  />
+		<result  property="sex"   column="sex"  />
+		<result  property="address"   column="address"  />
+		<result  property="imgurl"   column="imgurl"  />
+		<result  property="tickets"   column="tickets"  />
+		<result  property="hots"   column="hots"  />
+		<result  property="gifts"   column="gifts"  />
+		<result  property="status"   column="status"  />
+		<collection property="images" column="cid"  ofType="Images"   >
+			<result  property="id"   column="id"  />
+			<result  property="cid"   column="ccid"  />
+			<result  property="imgurl"   column="cimgurl"  />
+		</collection>
+	</resultMap>
+	
+	<update id="updateCandidateTickets" parameterType="int">
+		update candidate
+		set tickets = tickets+1
+		where cid=#{cid}
+	</update>
+	
+	<update id="updateCandidateGift" parameterType="map">
+		update candidate
+		set gifts = gifts+#{k_giftcount}
+		where cid=#{k_cid}
+	</update>
+	
+	
+	
+</mapper>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>报名</title>
+		<link rel="stylesheet" href="css/signUp.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<script type="text/javascript"  src="js/jquery-3.2.0.min.js" ></script>
+		<script type="text/javascript"  src="js/signUp.js" ></script>
+	</head>
+	<body>
+		<div id="signUp">
+			<form method="post" id="myform" enctype="multipart/form-data" >
+			<input type="hidden" name="aid" id="aid" >
+				<div>
+					<p>上传1到5张照片，第一张为封面</p>
+					<div id="photoes">
+						<div id="addFile">
+							<img src="img/addfile.jpg" />
+							<input type="file" id="add" />
+						</div>
+					</div>
+				</div>
+				<div class="form_div">
+					本人姓名：<input type="text" name="name" class="form_input"   />
+				</div>
+				<div class="form_div">
+					参赛宣言：<input type="text" name="declaration" class="form_input"   />
+				</div>
+				<div class="form_div">
+					手机号码：<input type="text" name="mobile" class="form_input"   />
+				</div>
+				<div class="form_div">
+					选手性别：<input type="radio" name="sex" value="男" /> 男
+					<input type="radio" name="sex" value="女" /> 女
+				</div>
+				<div class="form_div">
+					收货地址：<input type="text" name="address" class="form_input"   />
+				</div>
+				<div class="form_div">
+					请如实提交报名信息，报名信息为唯一获奖凭证
+				</div>
+				<div class="form_div">
+					<button type="button" id="btn_signUpNew">提交报名</button>
+				</div>
+			</form>
+		</div>
+		<div id="div3">
+			<div id="div3_flex">
+				<div id="gohome">
+					<img src="img/home.png"/>
+					<p>首页</p>
+				</div>
+				<div>
+					<img src="img/baoming.png"/>
+					<p>报名</p>
+				</div>
+				<div>
+					<img src="img/prize.png"/>
+					<p>奖品</p>
+				</div>
+				<div>
+					<img src="img/rank.png"/>
+					<p>排行</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

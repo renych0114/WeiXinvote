@@ -1,0 +1,79 @@
+body{
+	margin: 0px;
+}
+#div1_1>img{
+	width: 100%;
+}
+#div1_2{
+	height: 80px;
+	background-color: #F2F2F2;
+	display: flex;
+	align-items: center;
+}
+.data{
+	flex: 1;
+}
+.data>p{
+	text-align: center;
+}
+#div1_3>p{
+	text-align: center;
+}
+
+#btn_signup{
+	width: 100%;
+	height: 40px;
+	border-radius: 3px;
+	background-color: red;
+	color: white;
+	font-weight: bold;
+	border: none;
+	outline: none;
+	font-size: 16px;
+}
+#div2_2{
+	height: 40px;
+	display: flex;
+	margin-top: 3px;
+	border: solid 1px #cccccc;
+}
+#search_txt{
+	flex: 1;
+	border: none;
+	outline: none;
+}
+#btn_search{
+	width: 80px;
+	border: none;
+	background: none;
+	outline: none;
+	border-left: solid 1px #cccccc;
+	font-size: 16px;
+}
+#div2_3{
+	margin-top: 3px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.c_data{
+	width: 48%;
+	margin-left: 6px;
+	position: relative;
+}
+.c_data>div{
+	position: absolute;
+	left: 2px;
+	top: 0px;
+	background-color: #D4D1CE;
+	opacity: 0.7;
+}
+.c_data>img{
+	width: 100%;
+	height: 220px;
+}
+#div2_4{
+	text-align: right;
+}
+#div2{
+	margin-bottom: 80px;
+}

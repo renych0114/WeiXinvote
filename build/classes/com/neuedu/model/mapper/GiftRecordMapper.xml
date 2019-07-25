@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuedu.model.mapper.GiftRecordMapper">
+	
+	<insert id="saveGiftRecord"  parameterType="Giftrecord">
+		insert into giftrecord(openid,cid,gid,count,gifttime)
+		values(#{openid},#{cid},#{gid},#{count},#{gifttime})
+	</insert>
+	
+</mapper>

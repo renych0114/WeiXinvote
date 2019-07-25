@@ -1,0 +1,23 @@
+body{
+	margin: 0px;
+}
+#div3{
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	background-color: white;
+}
+#div3_flex{
+	display: flex;
+	height: 80px;
+	width: 100%;
+}
+#div3_flex>div{
+	flex: 1;
+	text-align: center;
+}
+#div3_flex img{
+	width: 40px;
+	height: 40px;
+}

@@ -1,0 +1,46 @@
+body{
+	margin: 0px;
+}
+#div1{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	left: 3px;
+	top: 5px;
+}
+.g_data{
+	width: 31%;
+	border: solid 1px gray;
+	margin-left: 2px;
+}
+.g_data>img{
+	width: 100%;
+}
+.g_data>p{
+	text-align: center;
+}
+#div2{
+	width: 100%;
+	text-align: right;
+}
+#div2>input{
+	width: 40px;
+}
+#div3{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 40px;
+	width: 100%;
+	background-color: white;
+}
+#div3flex{
+	display: flex;
+	height: 40px;
+}
+#div3flex>div{
+	flex: 1;
+	text-align: center;
+	line-height: 40px;
+}
